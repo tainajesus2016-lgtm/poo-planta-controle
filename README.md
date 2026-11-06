@@ -34,7 +34,10 @@ O enunciado e os critérios de avaliação são distribuídos separadamente pelo
 ## 2. Fork e requisitos
 
 Use Python 3.12+, compilador C++17 e GNU Make (Linux, WSL ou ambiente equivalente).
-Primeiro faça fork pela interface do GitHub. Substitua `SEU_USUARIO` abaixo:
+No WSL, execute os comandos a partir da raiz do projeto e use `PYTHON=python3`
+quando precisar escolher o interpretador; o `python3.15` existe apenas no
+ambiente Windows. Primeiro faça fork pela interface do GitHub. Substitua
+`SEU_USUARIO` abaixo:
 
 ```bash
 git clone https://github.com/SEU_USUARIO/poo-planta-controle.git
@@ -160,6 +163,21 @@ distinguir pedido escrito, pedido aceito e atuação expirada.
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-dev.txt
 make supervisor PYTHON=.venv/bin/python
+```
+
+Se o `.venv` atual foi criado no Windows, remova e recrie no WSL:
+
+```bash
+rm -rf .venv
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+```
+
+Se `python3 -m venv` falhar por falta de `ensurepip`, instale os pacotes:
+
+```bash
+sudo apt update
+sudo apt install -y python3-venv python3-pip
 ```
 
 A página inicial tem título, diretório e aviso de implementação incompleta.

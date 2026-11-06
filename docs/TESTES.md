@@ -87,7 +87,9 @@ Nem toda classe exige todos os tipos de caso; justifique os que não se aplicam.
 Execute `make test ETAPA=NN` na etapa correspondente. Depois de atualizar
 `ETAPA_ATUAL`, `make test` usa essa etapa automaticamente. Desde a etapa 01,
 há exigência de testes autorais C++; desde a etapa 03, também de testes Python.
-Os novos casos são executados junto às regressões anteriores. Se um teste
+No WSL, execute a partir da raiz do projeto e use `PYTHON=python3` quando não
+estiver usando um ambiente virtual. Os novos casos são executados junto às
+regressões anteriores. Se um teste
 autoral falhar, o comando falha, mesmo que todos os contratos fornecidos passem.
 
 Não basta testar manualmente no terminal, deixar um teste fora das pastas de

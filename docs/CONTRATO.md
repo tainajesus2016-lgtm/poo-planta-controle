@@ -11,6 +11,10 @@ planta Python --planta.json--> controlador C++ --telemetria.json--> Streamlit
       +------comando_planta.json-----+
 ```
 
+> **Ambiente de execução:** no WSL (Ubuntu), execute os comandos a partir da
+> raiz do projeto e use `python3` nos comandos Python. O `python3.15` é
+> específico do ambiente Windows e não existe no WSL.
+
 ## 1. Quem escreve e quem lê
 
 | Arquivo em `dados/` | Escritor | Leitor | Significado |
